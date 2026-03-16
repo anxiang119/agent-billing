@@ -1,0 +1,338 @@
+[
+  {
+    "name": "Ambari Metrics",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "ansible",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "canal",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "chukwa",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "cockroach",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "consul",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "datax",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "derby",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Docker",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "dubbo",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Eureka",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Glusterfs",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "haproxy",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "jstorm",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "kettle",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Kibana",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "kubernetes",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "logstash",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "openGauss",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "openoffice",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "opensips",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "phoenix",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Pig",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "pika",
+    "tag": "",
+    "status": "禁止",
+    "desc": "建议使用redis进行替换",
+    "note": ""
+  },
+  {
+    "name": "Ranger",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Solr",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Storm",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "supervisor",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Tez",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "A generalized data-flow programming framework, built on Hadoop YARN, which provides a powerful and flexible engine to execute an arbitrary DAG of tasks to process data for both batch and interactive u",
+    "note": ""
+  },
+  {
+    "name": "tidb",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "ttserver",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "varnish",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "YARN",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Jenkins",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "Jenkins是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件项目可以进行持续集成。",
+    "note": ""
+  },
+  {
+    "name": "OpenLdap",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "轻型目录访问协议",
+    "note": ""
+  },
+  {
+    "name": "Yapi",
+    "tag": "",
+    "status": "禁止新增",
+    "desc": "YApi 是一个可本地部署的、打通前后端及QA的、可视化的接口管理平台",
+    "note": ""
+  },
+  {
+    "name": "TDengine",
+    "tag": "大数据",
+    "status": "禁止新增",
+    "desc": "TDengine是涛思数据开发的一款高性能、分布式的物联网、工业大数据平台，其核心模块是高性能、集群开源、云原生、极简的时序数据库。TDengine专为物联网、工业互联网、电力、IT 运维等场景设计并优化，具有极强的弹性伸缩能力。同时它还带有内建的缓存、流式计算、数据订阅等系统功能，能大幅减少系统设计的复杂度，降低研发和运营成本。它能安全高效地将大量设备、数据采集器每天产生的高达 TB 甚至 PB",
+    "note": ""
+  },
+  {
+    "name": "GBase",
+    "tag": "数据库",
+    "status": "禁止新增",
+    "desc": "GBase 是南大通用数据技术有限公司推出的自主品牌的数据库产品",
+    "note": ""
+  },
+  {
+    "name": "Greenplum",
+    "tag": "数据库",
+    "status": "禁止新增",
+    "desc": "Greenplum的架构采用了MPP(大规模并行处理)。在 MPP 系统中，每个 SMP节点也可以运行自己的操作系统、数据库等。换言之，每个节点内的 CPU 不能访问另一个节点的内存。",
+    "note": ""
+  },
+  {
+    "name": "mariadb",
+    "tag": "数据库",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "mysql-Percona",
+    "tag": "数据库",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "Oracle",
+    "tag": "数据库",
+    "status": "禁止新增",
+    "desc": "Oracle开发的关系数据库产品因性能卓越而闻名，Oracle数据库产品为财富排行榜上的前1000家公司所采用，许多大型网站也选用了Oracle系统，是世界最好的数据库产品。此外，Oracle公司还开发其他应用程序和软件。同时，Oracle在英语里还是“神谕”的意思，意为“替神说话的”，寓指Oracle公司的发展目标和决心地位。",
+    "note": ""
+  },
+  {
+    "name": "PanWeiDB",
+    "tag": "数据库",
+    "status": "禁止新增",
+    "desc": "磐维数据库（PanWeiDB）是中国移动首个基于中国本土开源数据库openGauss打造的面向ICT基础设施的自研数据库产品。",
+    "note": ""
+  },
+  {
+    "name": "Vertica",
+    "tag": "数据库",
+    "status": "禁止新增",
+    "desc": "Vertica是一款基于列存储的MPP（massively parallel processing）架构的数据库。",
+    "note": ""
+  },
+  {
+    "name": "Ceph",
+    "tag": "文件",
+    "status": "禁止新增",
+    "desc": "Ceph是一种为优秀的性能、可靠性和可扩展性而设计的统一的、分布式文件系统。ceph 的统一体现在可以提供文件系统、块存储和对象存储，分布式体现在可以动态扩展。",
+    "note": ""
+  },
+  {
+    "name": "minio",
+    "tag": "文件",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  },
+  {
+    "name": "codis",
+    "tag": "缓存",
+    "status": "禁止",
+    "desc": "建议使用redis进行替换",
+    "note": ""
+  },
+  {
+    "name": "memcached",
+    "tag": "缓存",
+    "status": "禁止新增",
+    "desc": "",
+    "note": ""
+  }
+]

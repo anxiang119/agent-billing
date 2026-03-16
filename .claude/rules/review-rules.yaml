@@ -1,0 +1,34 @@
+# .claude/rules/reviewer-rules.yaml
+
+name: "代码审查者规则"
+description: "负责代码质量审查"
+
+hooks:
+  PostToolUse:
+    - matcher: ".*"
+      hooks:
+        - type: "notification"
+          message: "审查操作完成"
+
+rules:
+  - name: "安全检查"
+    when: "file_opened"
+    pattern: "**/*.js"
+    action: "security_scan"
+    
+  - name: "质量检查"
+    when: "file_modified"
+    pattern: "**/*.js"
+    action: "quality_check"
+    
+review_checklist:
+  - "代码可读性"
+  - "错误处理"
+  - "性能优化"
+  - "安全漏洞"
+  - "测试覆盖"
+  
+settings:
+  strict_mode: true
+  require_tests: true
+  min_coverage: 70

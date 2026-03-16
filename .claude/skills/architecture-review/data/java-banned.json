@@ -1,0 +1,992 @@
+[
+  {
+    "groupId": "javax.activation",
+    "artifactId": "activation",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "jakarta.activation",
+    "replaceArtifactId": "jakarta.activation-api",
+    "note": ""
+  },
+  {
+    "groupId": "com.ctrip.framework.apollo",
+    "artifactId": "apollo-adminservice",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "老旧包，需要替换。"
+  },
+  {
+    "groupId": "com.ctrip.framework.apollo",
+    "artifactId": "apollo-configservice",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "老旧包，需要替换。"
+  },
+  {
+    "groupId": "com.ctrip.framework.apollo",
+    "artifactId": "apollo-portal",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "老旧包，需要替换。"
+  },
+  {
+    "groupId": "com.googlecode.aviator",
+    "artifactId": "aviator",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "axis",
+    "artifactId": "axis",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.axis2",
+    "replaceArtifactId": "axis2",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache.commons.codec",
+    "artifactId": "commons-codec",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "commons-codec",
+    "replaceArtifactId": "commons-codec",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache",
+    "artifactId": "commons-httpclient",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.httpcomponents",
+    "replaceArtifactId": "httpclient",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache.commons.httpclient",
+    "artifactId": "commons-httpclient",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.httpcomponents",
+    "replaceArtifactId": "httpclient",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache.commons.lang",
+    "artifactId": "commons-lang",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.commons",
+    "replaceArtifactId": "commons-lang3",
+    "note": ""
+  },
+  {
+    "groupId": "commons-logging",
+    "artifactId": "commons-logging-api",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "commons-logging",
+    "replaceArtifactId": "commons-logging",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache.commons",
+    "artifactId": "commons-net",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "commons-net",
+    "replaceArtifactId": "commons-net",
+    "note": ""
+  },
+  {
+    "groupId": "concurrent",
+    "artifactId": "concurrent",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "推荐 jdk自带的ThreadPoolExecutor"
+  },
+  {
+    "groupId": "ezmorph",
+    "artifactId": "ezmorph",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "net.sf.ezmorph",
+    "replaceArtifactId": "ezmorph",
+    "note": ""
+  },
+  {
+    "groupId": "org.csource",
+    "artifactId": "fastdfs-client",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.csource",
+    "replaceArtifactId": "fastdfs-client-java",
+    "note": ""
+  },
+  {
+    "groupId": "org.codehaus.groovy",
+    "artifactId": "groovy",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.codehaus.groovy",
+    "replaceArtifactId": "groovy-all",
+    "note": ""
+  },
+  {
+    "groupId": "org.fusesource.hawtbuf",
+    "artifactId": "hawtbuf",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.google.protobuf",
+    "replaceArtifactId": "protobuf-java",
+    "note": ""
+  },
+  {
+    "groupId": "math.geom2d",
+    "artifactId": "javaGeom",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.locationtech.jts",
+    "replaceArtifactId": "jts-core",
+    "note": ""
+  },
+  {
+    "groupId": "com.google.code.javaparser",
+    "artifactId": "javaparser",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "net.sourceforge.jchardet",
+    "artifactId": "jchardet",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.ibm.icu",
+    "replaceArtifactId": "icu4j",
+    "note": ""
+  },
+  {
+    "groupId": "org.jfree",
+    "artifactId": "jcommon",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.commons",
+    "replaceArtifactId": "commons-lang3",
+    "note": ""
+  },
+  {
+    "groupId": "org.jeecgframework.boot",
+    "artifactId": "jeecg-module-sequence",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "老旧包，需要替换。"
+  },
+  {
+    "groupId": "org.jeecgframework.boot",
+    "artifactId": "jeecg-system-biz",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "老旧包，需要替换。"
+  },
+  {
+    "groupId": "com.jcraft",
+    "artifactId": "jsch",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.github.mwiede",
+    "replaceArtifactId": "jsch",
+    "note": ""
+  },
+  {
+    "groupId": "jsch",
+    "artifactId": "jsch",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.github.mwiede",
+    "replaceArtifactId": "jsch",
+    "note": ""
+  },
+  {
+    "groupId": "json",
+    "artifactId": "json-lib",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.fasterxml.jackson.core",
+    "replaceArtifactId": "jackson-core",
+    "note": ""
+  },
+  {
+    "groupId": "de.odysseus.juel",
+    "artifactId": "juel-impl",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "jakarta.el",
+    "replaceArtifactId": "jakarta.el-api",
+    "note": ""
+  },
+  {
+    "groupId": "net.sf.luaj",
+    "artifactId": "luaj-jse",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.luaj",
+    "replaceArtifactId": "luaj-jse",
+    "note": ""
+  },
+  {
+    "groupId": "org.keplerproject",
+    "artifactId": "luajava",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.luaj",
+    "replaceArtifactId": "luaj-jse",
+    "note": ""
+  },
+  {
+    "groupId": "com.rxjava",
+    "artifactId": "rxjava",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "io.reactivex.rxjava3",
+    "replaceArtifactId": "rxjava",
+    "note": ""
+  },
+  {
+    "groupId": "org.mitre.dsmiley.httpproxy",
+    "artifactId": "smiley-http-proxy-servlet",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "避免安全问题，代理服务器请使用独立的应用实现"
+  },
+  {
+    "groupId": "soap",
+    "artifactId": "soap",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "jakarta.xml.soap",
+    "replaceArtifactId": "jakarta.xml.soap-api",
+    "note": ""
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-admin-starter-client",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "de.codecentric",
+    "replaceArtifactId": "spring-boot-admin-starter-client",
+    "note": ""
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-admin-starter-server",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "de.codecentric",
+    "replaceArtifactId": "spring-boot-admin-starter-server",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache",
+    "artifactId": "ws.commons.schema",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.ws.xmlschema",
+    "replaceArtifactId": "xmlschema-core",
+    "note": ""
+  },
+  {
+    "groupId": "com.github.sgroschupf",
+    "artifactId": "zkclient",
+    "status": "禁止新增",
+    "action": "替换",
+    "replaceGroupId": "com.101tec",
+    "replaceArtifactId": "zkclient",
+    "note": ""
+  },
+  {
+    "groupId": "com.github.xiaoymin",
+    "artifactId": "knife4j-spring-boot-starter",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.springdoc",
+    "replaceArtifactId": "springdoc-openapi-starter-webmvc-ui",
+    "note": ""
+  },
+  {
+    "groupId": "ma.glasnost.orika",
+    "artifactId": "orika-core",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.mapstruct",
+    "replaceArtifactId": "mapstruct",
+    "note": ""
+  },
+  {
+    "groupId": "ru.yandex.clickhouse",
+    "artifactId": "clickhouse-jdbc",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.clickhouse",
+    "replaceArtifactId": "clickhouse-jdbc",
+    "note": ""
+  },
+  {
+    "groupId": "net.sourceforge.jexcelapi",
+    "artifactId": "jxl",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.alibaba",
+    "replaceArtifactId": "easyexcel",
+    "note": ""
+  },
+  {
+    "groupId": "org.jetbrains",
+    "artifactId": "annotations",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "javax.annotation",
+    "replaceArtifactId": "javax.annotation-api",
+    "note": ""
+  },
+  {
+    "groupId": "com.fifesoft",
+    "artifactId": "rsyntaxtextarea",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "Java Swing应用，一般不会用，有特殊情况单独说明申请。"
+  },
+  {
+    "groupId": "com.sun.mail",
+    "artifactId": "javax.mail",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.commons",
+    "replaceArtifactId": "commons-email",
+    "note": ""
+  },
+  {
+    "groupId": "com.alibaba",
+    "artifactId": "fastjson",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.alibaba.fastjson2",
+    "replaceArtifactId": "fastjson2",
+    "note": ""
+  },
+  {
+    "groupId": "net.sf.json-lib",
+    "artifactId": "json-lib",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.fasterxml.jackson.core",
+    "replaceArtifactId": "jackson-core",
+    "note": ""
+  },
+  {
+    "groupId": "net.minidev",
+    "artifactId": "json-smart",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.fasterxml.jackson.core",
+    "replaceArtifactId": "jackson-core",
+    "note": ""
+  },
+  {
+    "groupId": "mysql",
+    "artifactId": "mysql-connector-java",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.mysql",
+    "replaceArtifactId": "mysql-connector-j",
+    "note": ""
+  },
+  {
+    "groupId": "org.springframework.cloud",
+    "artifactId": "spring-cloud-starter-alibaba-nacos-config",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.alibaba.cloud",
+    "replaceArtifactId": "spring-cloud-starter-alibaba-nacos-config",
+    "note": ""
+  },
+  {
+    "groupId": "org.springframework.cloud",
+    "artifactId": "spring-cloud-starter-alibaba-nacos-discovery",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.alibaba.cloud",
+    "replaceArtifactId": "spring-cloud-starter-alibaba-nacos-discovery",
+    "note": ""
+  },
+  {
+    "groupId": "oceanbase-client",
+    "artifactId": "oceanbase-client",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.oceanbase",
+    "replaceArtifactId": "oceanbase-client",
+    "note": ""
+  },
+  {
+    "groupId": "ojdbc",
+    "artifactId": "ojdbc",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.oracle.database.jdbc",
+    "replaceArtifactId": "ojdbc8",
+    "note": ""
+  },
+  {
+    "groupId": "com.oracle.ojdbc",
+    "artifactId": "ojdbc8",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.oracle.database.jdbc",
+    "replaceArtifactId": "ojdbc8",
+    "note": ""
+  },
+  {
+    "groupId": "cn.easyproject",
+    "artifactId": "orai18n",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.oracle.database.nls",
+    "replaceArtifactId": "orai18n",
+    "note": ""
+  },
+  {
+    "groupId": "com.oracle.ojdbc",
+    "artifactId": "orai18n",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.oracle.database.nls",
+    "replaceArtifactId": "orai18n",
+    "note": ""
+  },
+  {
+    "groupId": "org.jvnet.hudson",
+    "artifactId": "ganymed-ssh2",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "ch.ethz.ganymed",
+    "replaceArtifactId": "ganymed-ssh2",
+    "note": ""
+  },
+  {
+    "groupId": "org.tmatesoft.svnkit",
+    "artifactId": "svnkit",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "生产环境不需要使用代码库工具，有特殊情况单独说明申请。"
+  },
+  {
+    "groupId": "org.apache.axis",
+    "artifactId": "axis",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.axis2",
+    "replaceArtifactId": "axis2",
+    "note": ""
+  },
+  {
+    "groupId": "axis",
+    "artifactId": "axis-jaxrpc",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.axis2",
+    "replaceArtifactId": "axis2",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache.axis",
+    "artifactId": "axis-jaxrpc",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.axis2",
+    "replaceArtifactId": "axis2",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache.axis",
+    "artifactId": "axis-saaj",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.axis2",
+    "replaceArtifactId": "axis2",
+    "note": ""
+  },
+  {
+    "groupId": "axis",
+    "artifactId": "axis-wsdl4j",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.axis2",
+    "replaceArtifactId": "axis2",
+    "note": ""
+  },
+  {
+    "groupId": "dom4j",
+    "artifactId": "dom4j",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.dom4j",
+    "replaceArtifactId": "dom4j",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache.directory.studio",
+    "artifactId": "org.dom4j.dom4j",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.dom4j",
+    "replaceArtifactId": "dom4j",
+    "note": ""
+  },
+  {
+    "groupId": "org.eclipse.jgit",
+    "artifactId": "org.eclipse.jgit",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "生产环境不需要使用代码库工具，有特殊情况单独说明申请。"
+  },
+  {
+    "groupId": "com.h2database",
+    "artifactId": "h2",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "生产环境不需要使用h2，有特殊情况单独说明申请。"
+  },
+  {
+    "groupId": "com.github.luben",
+    "artifactId": "zstd-jni",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "net.jpountz.lz4",
+    "replaceArtifactId": "lz4",
+    "note": ""
+  },
+  {
+    "groupId": "commons-lang",
+    "artifactId": "commons-lang",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.commons",
+    "replaceArtifactId": "commons-lang3",
+    "note": ""
+  },
+  {
+    "groupId": "commons-pool",
+    "artifactId": "commons-pool",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.commons",
+    "replaceArtifactId": "commons-pool2",
+    "note": ""
+  },
+  {
+    "groupId": "org.apache.ant",
+    "artifactId": "ant",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "生产环境不需要使用编译工具，有特殊情况单独说明申请。"
+  },
+  {
+    "groupId": "com.dcfs",
+    "artifactId": "ftp",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.github.mwiede",
+    "replaceArtifactId": "jsch",
+    "note": ""
+  },
+  {
+    "groupId": "log4j",
+    "artifactId": "log4j",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.logging.log4j",
+    "replaceArtifactId": "log4j-core",
+    "note": ""
+  },
+  {
+    "groupId": "ch.qos.reload4j",
+    "artifactId": "reload4j",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.apache.logging.log4j",
+    "replaceArtifactId": "log4j-core",
+    "note": ""
+  },
+  {
+    "groupId": "net.dongliu",
+    "artifactId": "apk-parser",
+    "status": "禁止",
+    "action": "禁用",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": "生产环境不需要使用此工具，有特殊情况单独说明申请。"
+  },
+  {
+    "groupId": "com.github.penggle",
+    "artifactId": "kaptcha",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.dromara.hutool",
+    "replaceArtifactId": "hutool-all",
+    "note": ""
+  },
+  {
+    "groupId": "pro.fessional",
+    "artifactId": "kaptcha",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.github.penggle",
+    "replaceArtifactId": "kaptcha",
+    "note": ""
+  },
+  {
+    "groupId": "com.dangdang",
+    "artifactId": "elastic-job-common-core",
+    "status": "禁止",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "com.dangdang",
+    "artifactId": "elastic-job-core",
+    "status": "禁止",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "com.dangdang",
+    "artifactId": "elastic-job-lite-core",
+    "status": "禁止",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "com.dangdang",
+    "artifactId": "elastic-job-lite-lifecycle",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.xuxueli",
+    "replaceArtifactId": "xxl-job-core",
+    "note": ""
+  },
+  {
+    "groupId": "com.dangdang",
+    "artifactId": "elastic-job-lite-spring",
+    "status": "禁止",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "com.dangdang",
+    "artifactId": "elastic-job-spring",
+    "status": "禁止",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.hibernate",
+    "artifactId": "hibernate-core",
+    "status": "禁止新增",
+    "action": "替换",
+    "replaceGroupId": "org.mybatis",
+    "replaceArtifactId": "mybatis",
+    "note": ""
+  },
+  {
+    "groupId": "org.hibernate.orm",
+    "artifactId": "hibernate-core",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.hibernate",
+    "artifactId": "hibernate-entitymanager",
+    "status": "禁止新增",
+    "action": "替换",
+    "replaceGroupId": "org.mybatis",
+    "replaceArtifactId": "mybatis",
+    "note": ""
+  },
+  {
+    "groupId": "org.hibernate.javax.persistence",
+    "artifactId": "hibernate-jpa-2.1-api",
+    "status": "禁止新增",
+    "action": "替换",
+    "replaceGroupId": "org.mybatis",
+    "replaceArtifactId": "mybatis",
+    "note": ""
+  },
+  {
+    "groupId": "org.hibernate",
+    "artifactId": "hibernate-re",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.hibernate.validator",
+    "artifactId": "hibernate-validator",
+    "status": "禁止新增",
+    "action": "替换",
+    "replaceGroupId": "org.mybatis",
+    "replaceArtifactId": "mybatis",
+    "note": ""
+  },
+  {
+    "groupId": "org.hibernate",
+    "artifactId": "hibernate-validator",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "com.lowagie",
+    "artifactId": "itext",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.itextpdf",
+    "replaceArtifactId": "itext-core",
+    "note": ""
+  },
+  {
+    "groupId": "org.mapstruct",
+    "artifactId": "mapstruct-jdk8",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "org.mapstruct",
+    "replaceArtifactId": "mapstruct",
+    "note": ""
+  },
+  {
+    "groupId": "org.jboss.netty",
+    "artifactId": "netty",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "io.netty",
+    "replaceArtifactId": "netty-all",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-bpmn-converter",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-bpmn-model",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-diagram-rest",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-engine",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-explorer",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-image-generator",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-json-converter",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "com.activiti",
+    "artifactId": "activiti-model",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-modeler",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-process-validation",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-rest",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-spring",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-spring-boot-starter",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-spring-boot-starter-actuator",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-spring-boot-starter-basic",
+    "status": "禁止新增",
+    "action": "替换",
+    "replaceGroupId": "org.flowable",
+    "replaceArtifactId": "flowable-spring-boot-starter",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-spring-boot-starter-jpa",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "org.activiti",
+    "artifactId": "activiti-spring-boot-starter-rest-api",
+    "status": "禁止新增",
+    "action": "",
+    "replaceGroupId": "",
+    "replaceArtifactId": "",
+    "note": ""
+  },
+  {
+    "groupId": "com.lowagie",
+    "artifactId": "itextasian",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.itextpdf",
+    "replaceArtifactId": "itext-core",
+    "note": ""
+  },
+  {
+    "groupId": "com.lowagie",
+    "artifactId": "itextasiancmaps",
+    "status": "禁止",
+    "action": "替换",
+    "replaceGroupId": "com.itextpdf",
+    "replaceArtifactId": "itext-core",
+    "note": ""
+  }
+]
