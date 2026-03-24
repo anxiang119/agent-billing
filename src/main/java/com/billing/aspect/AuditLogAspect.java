@@ -6,6 +6,9 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
 @Aspect
 @Component
 @RequiredArgsConstructor
@@ -25,6 +28,7 @@ public class AuditLogAspect {
     }
 }
 
+@Retention(RetentionPolicy.RUNTIME)
 @interface AuditLog {
     String module() default "";
     String operation() default "";
