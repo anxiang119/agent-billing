@@ -2,6 +2,8 @@ package com.billing.repository;
 
 import com.billing.entity.Bill;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
@@ -48,12 +50,13 @@ public interface BillRepository extends JpaRepository<Bill, Long> {
     List<Bill> findByUserIdAndBillType(Long userId, String billType);
 
     /**
-     * 根据租户ID和查询期间查询账单列表
+     * 根据租户ID和账单周期查询账单列表
      *
      * @param tenantId 租户ID
-     * @param periodStart 开始时间
-     * @param periodEnd 结束时间
+     * @param periodStartTime 账单周期开始时间
+     * @param periodEndTime 账单周期结束时间
      * @return 账单列表
      */
-    List<Bill> findByTenantIdAndPeriod(Long tenantId, LocalDateTime periodStart, LocalDateTime periodEnd);
+    @Query("SELECT b FROM Bill b WHERE b.tenantId = :tenantId AND b.periodStartTime >= :periodStartTime AND b.periodEndTime <= :periodEndTime")
+    List<Bill> findByTenantIdAndPeriod(@Param("tenantId") Long tenantId, @Param("periodStartTime") LocalDateTime periodStartTime, @Param("periodEndTime") LocalDateTime periodEndTime);
 }
