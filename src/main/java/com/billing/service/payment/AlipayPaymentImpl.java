@@ -2,15 +2,15 @@ package com.billing.service.payment;
 
 import com.billing.dto.PaymentDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
 @Service
+@Primary
 @RequiredArgsConstructor
 public class AlipayPaymentImpl implements PaymentGateway {
-
-    private final PaymentService paymentService;
 
     @Override
     public PaymentDTO.CreateOrderResponse createOrder(PaymentDTO.CreateOrderRequest request) {

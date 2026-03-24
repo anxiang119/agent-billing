@@ -10,8 +10,6 @@ import java.math.BigDecimal;
 @RequiredArgsConstructor
 public class WechatPaymentImpl implements PaymentGateway {
 
-    private final PaymentService paymentService;
-
     @Override
     public PaymentDTO.CreateOrderResponse createOrder(PaymentDTO.CreateOrderRequest request) {
         PaymentDTO.CreateOrderResponse response = new PaymentDTO.CreateOrderResponse();
