@@ -1,0 +1,53 @@
+{
+  "scenario": "agent_call_flow",
+  "description": "智能体调用完整流程测试场景",
+  "steps": [
+    {
+      "step": "estimate",
+      "description": "预估费用",
+      "request": {
+        "tenantId": 1,
+        "userId": 1,
+        "resourceType": "API",
+        "resourceModel": "GPT-4",
+        "quantity": 1000
+      },
+      "expected": {
+        "estimatedFee": 10.00,
+        "currency": "CNY"
+      }
+    },
+    {
+      "step": "pre_deduct",
+      "description": "预扣费用",
+      "request": {
+        "tenantId": 1,
+        "userId": 1,
+        "resourceId": "resource-001",
+        "resourceType": "API",
+        "resourceModel": "GPT-4",
+        "quantity": 1000
+      },
+      "expected": {
+        "success": true,
+        "deductedAmount": 10.00
+      }
+    },
+    {
+      "step": "settle",
+      "description": "结算费用",
+      "request": {
+        "tenantId": 1,
+        "userId": 1,
+        "resourceId": "resource-001",
+        "resourceType": "API",
+        "resourceModel": "GPT-4",
+        "quantity": 1000
+      },
+      "expected": {
+        "success": true,
+        "actualAmount": 10.00
+      }
+    }
+  ]
+}

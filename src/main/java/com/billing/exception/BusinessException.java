@@ -45,7 +45,7 @@ public class BusinessException extends RuntimeException {
      * @return 业务异常
      */
     public static BusinessException insufficientBalance(String message) {
-        return new BusinessException(Response.ResponseCode.INSUFFICIENT_BALANCE, message);
+        return new BusinessException(Response.ResponseCode.INSUFFICIENT_BALANCE.getCode(), message);
     }
 
     /**
@@ -55,7 +55,7 @@ public class BusinessException extends RuntimeException {
      * @return 业务异常
      */
     public static BusinessException budgetExceeded(String message) {
-        return new BusinessException(Response.ResponseCode.BUDGET_EXCEEDED, message);
+        return new BusinessException(Response.ResponseCode.BUDGET_EXCEEDED.getCode(), message);
     }
 
     /**
@@ -65,7 +65,7 @@ public class BusinessException extends RuntimeException {
      * @return 业务异常
      */
     public static BusinessException userNotFound(Long userId) {
-        return new BusinessException(Response.ResponseCode.USER_NOT_FOUND,
+        return new BusinessException(Response.ResponseCode.USER_NOT_FOUND.getCode(),
                 "用户不存在：" + userId);
     }
 
@@ -76,7 +76,7 @@ public class BusinessException extends RuntimeException {
      * @return 业务异常
      */
     public static BusinessException tenantNotFound(Long tenantId) {
-        return new BusinessException(Response.ResponseCode.TENANT_NOT_FOUND,
+        return new BusinessException(Response.ResponseCode.TENANT_NOT_FOUND.getCode(),
                 "租户不存在：" + tenantId);
     }
 
@@ -87,7 +87,7 @@ public class BusinessException extends RuntimeException {
      * @return 业务异常
      */
     public static BusinessException pricingConfigNotFound(String resourceType) {
-        return new BusinessException(Response.ResponseCode.PRICING_CONFIG_NOT_FOUND,
+        return new BusinessException(Response.ResponseCode.PRICING_CONFIG_NOT_FOUND.getCode(),
                 "定价配置不存在：" + resourceType);
     }
 
@@ -98,7 +98,7 @@ public class BusinessException extends RuntimeException {
      * @return 业务异常
      */
     public static BusinessException paramError(String message) {
-        return new BusinessException(Response.ResponseCode.PARAM_ERROR, message);
+        return new BusinessException(Response.ResponseCode.PARAM_ERROR.getCode(), message);
     }
 
     /**
@@ -108,7 +108,7 @@ public class BusinessException extends RuntimeException {
      * @return 业务异常
      */
     public static BusinessException systemError(String message) {
-        return new BusinessException(Response.ResponseCode.SYSTEM_ERROR, message);
+        return new BusinessException(Response.ResponseCode.SYSTEM_ERROR.getCode(), message);
     }
 
     /**
@@ -119,6 +119,6 @@ public class BusinessException extends RuntimeException {
      * @return 业务异常
      */
     public static BusinessException systemError(String message, Throwable cause) {
-        return new BusinessException(Response.ResponseCode.SYSTEM_ERROR, message, cause);
+        return new BusinessException(Response.ResponseCode.SYSTEM_ERROR.getCode(), message, cause);
     }
 }

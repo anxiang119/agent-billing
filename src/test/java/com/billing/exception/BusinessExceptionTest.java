@@ -21,11 +21,11 @@ class BusinessExceptionTest {
     @Test
     void testExceptionWithResponseCode() {
         BusinessException exception = new BusinessException(
-                Response.ResponseCode.INSUFFICIENT_BALANCE,
-                Response.ResponseCode.INSUFFICIENT_BALANCE_MESSAGE
+                Response.ResponseCode.INSUFFICIENT_BALANCE.getCode(),
+                Response.ResponseCode.INSUFFICIENT_BALANCE.getMessage()
         );
-        assertEquals(Response.ResponseCode.INSUFFICIENT_BALANCE, exception.getCode());
-        assertEquals(Response.ResponseCode.INSUFFICIENT_BALANCE_MESSAGE, exception.getMessage());
+        assertEquals(Response.ResponseCode.INSUFFICIENT_BALANCE.getCode(), exception.getCode());
+        assertEquals(Response.ResponseCode.INSUFFICIENT_BALANCE.getMessage(), exception.getMessage());
     }
 
     @Test
@@ -40,49 +40,49 @@ class BusinessExceptionTest {
     @Test
     void testInsufficientBalanceException() {
         BusinessException exception = BusinessException.insufficientBalance("余额不足");
-        assertEquals(Response.ResponseCode.INSUFFICIENT_BALANCE, exception.getCode());
+        assertEquals(Response.ResponseCode.INSUFFICIENT_BALANCE.getCode(), exception.getCode());
         assertEquals("余额不足", exception.getMessage());
     }
 
     @Test
     void testBudgetExceededException() {
         BusinessException exception = BusinessException.budgetExceeded("预算超限");
-        assertEquals(Response.ResponseCode.BUDGET_EXCEEDED, exception.getCode());
+        assertEquals(Response.ResponseCode.BUDGET_EXCEEDED.getCode(), exception.getCode());
         assertEquals("预算超限", exception.getMessage());
     }
 
     @Test
     void testUserNotFoundException() {
         BusinessException exception = BusinessException.userNotFound(12345L);
-        assertEquals(Response.ResponseCode.USER_NOT_FOUND, exception.getCode());
+        assertEquals(Response.ResponseCode.USER_NOT_FOUND.getCode(), exception.getCode());
         assertTrue(exception.getMessage().contains("12345"));
     }
 
     @Test
     void testTenantNotFoundException() {
         BusinessException exception = BusinessException.tenantNotFound(67890L);
-        assertEquals(Response.ResponseCode.TENANT_NOT_FOUND, exception.getCode());
+        assertEquals(Response.ResponseCode.TENANT_NOT_FOUND.getCode(), exception.getCode());
         assertTrue(exception.getMessage().contains("67890"));
     }
 
     @Test
     void testPricingConfigNotFoundException() {
         BusinessException exception = BusinessException.pricingConfigNotFound("TOKEN");
-        assertEquals(Response.ResponseCode.PRICING_CONFIG_NOT_FOUND, exception.getCode());
+        assertEquals(Response.ResponseCode.PRICING_CONFIG_NOT_FOUND.getCode(), exception.getCode());
         assertTrue(exception.getMessage().contains("TOKEN"));
     }
 
     @Test
     void testParamErrorException() {
         BusinessException exception = BusinessException.paramError("参数错误");
-        assertEquals(Response.ResponseCode.PARAM_ERROR, exception.getCode());
+        assertEquals(Response.ResponseCode.PARAM_ERROR.getCode(), exception.getCode());
         assertEquals("参数错误", exception.getMessage());
     }
 
     @Test
     void testSystemErrorException() {
         BusinessException exception = BusinessException.systemError("系统错误");
-        assertEquals(Response.ResponseCode.SYSTEM_ERROR, exception.getCode());
+        assertEquals(Response.ResponseCode.SYSTEM_ERROR.getCode(), exception.getCode());
         assertEquals("系统错误", exception.getMessage());
     }
 }

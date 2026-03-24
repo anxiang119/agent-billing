@@ -99,9 +99,11 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<Response<Void>> handleTypeMismatchException(MethodArgumentTypeMismatchException exception) {
+        Class<?> requiredType = exception.getRequiredType();
+        String typeName = requiredType != null ? requiredType.getSimpleName() : "未知类型";
         String message = String.format("参数类型错误: %s 期望类型为 %s",
                 exception.getName(),
-                exception.getRequiredType().getSimpleName());
+                typeName);
         log.warn("参数类型不匹配异常: {}", message);
 
         return ResponseEntity

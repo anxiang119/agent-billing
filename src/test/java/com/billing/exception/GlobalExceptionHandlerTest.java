@@ -34,7 +34,7 @@ class GlobalExceptionHandlerTest {
         ResponseEntity<Response<Void>> response = handler.handleBusinessException(exception);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(Response.ResponseCode.INSUFFICIENT_BALANCE, response.getBody().getCode());
+        assertEquals(Response.ResponseCode.INSUFFICIENT_BALANCE.getCode(), response.getBody().getCode());
         assertEquals("余额不足", response.getBody().getMessage());
         assertNull(response.getBody().getData());
     }
@@ -45,7 +45,7 @@ class GlobalExceptionHandlerTest {
         ResponseEntity<Response<Void>> response = handler.handleIllegalArgumentException(exception);
 
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-        assertEquals(Response.ResponseCode.PARAM_ERROR, response.getBody().getCode());
+        assertEquals(Response.ResponseCode.PARAM_ERROR.getCode(), response.getBody().getCode());
         assertTrue(response.getBody().getMessage().contains("参数不合法"));
     }
 
@@ -61,7 +61,7 @@ class GlobalExceptionHandlerTest {
         ResponseEntity<Response<Void>> response = handler.handleValidationException(exception);
 
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-        assertEquals(Response.ResponseCode.PARAM_ERROR, response.getBody().getCode());
+        assertEquals(Response.ResponseCode.PARAM_ERROR.getCode(), response.getBody().getCode());
         assertTrue(response.getBody().getMessage().contains("参数校验失败"));
     }
 
@@ -69,12 +69,11 @@ class GlobalExceptionHandlerTest {
     void testHandleMethodArgumentTypeMismatchException() {
         MethodArgumentTypeMismatchException exception = mock(MethodArgumentTypeMismatchException.class);
         when(exception.getName()).thenReturn("testParam");
-        when(exception.getRequiredType()).thenReturn(Long.class);
 
         ResponseEntity<Response<Void>> response = handler.handleTypeMismatchException(exception);
 
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-        assertEquals(Response.ResponseCode.PARAM_ERROR, response.getBody().getCode());
+        assertEquals(Response.ResponseCode.PARAM_ERROR.getCode(), response.getBody().getCode());
         assertTrue(response.getBody().getMessage().contains("参数类型错误"));
     }
 
@@ -84,7 +83,7 @@ class GlobalExceptionHandlerTest {
         ResponseEntity<Response<Void>> response = handler.handleNullPointerException(exception);
 
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertEquals(Response.ResponseCode.SYSTEM_ERROR, response.getBody().getCode());
+        assertEquals(Response.ResponseCode.SYSTEM_ERROR.getCode(), response.getBody().getCode());
         assertTrue(response.getBody().getMessage().contains("系统错误"));
     }
 
@@ -94,7 +93,7 @@ class GlobalExceptionHandlerTest {
         ResponseEntity<Response<Void>> response = handler.handleRuntimeException(exception);
 
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertEquals(Response.ResponseCode.SYSTEM_ERROR, response.getBody().getCode());
+        assertEquals(Response.ResponseCode.SYSTEM_ERROR.getCode(), response.getBody().getCode());
         assertTrue(response.getBody().getMessage().contains("系统错误"));
     }
 
@@ -104,7 +103,7 @@ class GlobalExceptionHandlerTest {
         ResponseEntity<Response<Void>> response = handler.handleException(exception);
 
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertEquals(Response.ResponseCode.SYSTEM_ERROR, response.getBody().getCode());
+        assertEquals(Response.ResponseCode.SYSTEM_ERROR.getCode(), response.getBody().getCode());
         assertTrue(response.getBody().getMessage().contains("系统错误"));
     }
 }

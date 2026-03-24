@@ -19,7 +19,7 @@ class ResponseTest {
     @Test
     void testSuccessResponse() {
         Response<String> response = Response.success("test data");
-        assertEquals(ResponseCode.SUCCESS, response.getCode());
+        assertEquals(Response.ResponseCode.SUCCESS.getCode(), response.getCode());
         assertEquals("操作成功", response.getMessage());
         assertEquals("test data", response.getData());
     }
@@ -27,23 +27,31 @@ class ResponseTest {
     @Test
     void testSuccessResponseWithMessage() {
         Response<String> response = Response.success("自定义消息", "test data");
-        assertEquals(ResponseCode.SUCCESS, response.getCode());
+        assertEquals(Response.ResponseCode.SUCCESS.getCode(), response.getCode());
         assertEquals("自定义消息", response.getMessage());
         assertEquals("test data", response.getData());
     }
 
     @Test
+    void testSuccessResponseWithoutData() {
+        Response<Void> response = Response.success("操作成功", null);
+        assertEquals(Response.ResponseCode.SUCCESS.getCode(), response.getCode());
+        assertEquals("操作成功", response.getMessage());
+        assertNull(response.getData());
+    }
+
+    @Test
     void testFailureResponse() {
         Response<String> response = Response.failure("操作失败");
-        assertEquals(ResponseCode.FAILURE, response.getCode());
+        assertEquals(Response.ResponseCode.FAILURE.getCode(), response.getCode());
         assertEquals("操作失败", response.getMessage());
         assertNull(response.getData());
     }
 
     @Test
     void testErrorResponse() {
-        Response<String> response = Response.error(ResponseCode.BUSINESS_ERROR, "业务错误");
-        assertEquals(ResponseCode.BUSINESS_ERROR, response.getCode());
+        Response<String> response = Response.error(Response.ResponseCode.BUSINESS_ERROR, "业务错误");
+        assertEquals(Response.ResponseCode.BUSINESS_ERROR.getCode(), response.getCode());
         assertEquals("业务错误", response.getMessage());
         assertNull(response.getData());
     }
@@ -62,7 +70,7 @@ class ResponseTest {
         Page<String> page = new PageImpl<>(data, PageRequest.of(0, 10), 1);
 
         Response<Page<String>> response = Response.page(page);
-        assertEquals(ResponseCode.SUCCESS, response.getCode());
+        assertEquals(Response.ResponseCode.SUCCESS.getCode(), response.getCode());
         assertEquals("操作成功", response.getMessage());
         assertNotNull(response.getData());
         assertEquals(1, response.getData().getTotalElements());

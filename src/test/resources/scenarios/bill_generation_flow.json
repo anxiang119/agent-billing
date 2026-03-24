@@ -1,0 +1,30 @@
+{
+  "scenario": "bill_generation_flow",
+  "description": "账单生成完整流程测试场景",
+  "steps": [
+    {
+      "step": "generate_bill",
+      "description": "生成月度账单",
+      "request": {
+        "tenantId": 1,
+        "userId": 1,
+        "billType": "MONTHLY"
+      },
+      "expected": {
+        "billType": "MONTHLY",
+        "status": "GENERATED"
+      }
+    },
+    {
+      "step": "query_bill",
+      "description": "查询账单",
+      "request": {
+        "billId": 1
+      },
+      "expected": {
+        "id": 1,
+        "billType": "MONTHLY"
+      }
+    }
+  ]
+}

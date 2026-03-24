@@ -2,6 +2,7 @@ package com.billing.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
 
@@ -32,13 +33,14 @@ public class Response<T> {
     private T data;
 
     /**
-     * 创建成功响应（无数据）
+     * 创建成功响应（带消息和数据）
      *
      * @param message 成功消息
+     * @param data    响应数据
      * @return 响应对象
      */
-    public static Response<Void> success(String message) {
-        return new Response<>(ResponseCode.SUCCESS, message, null);
+    public static <T> Response<T> success(String message, T data) {
+        return new Response<>(ResponseCode.SUCCESS.getCode(), message, data);
     }
 
     /**
@@ -48,18 +50,7 @@ public class Response<T> {
      * @return 响应对象
      */
     public static <T> Response<T> success(T data) {
-        return new Response<>(ResponseCode.SUCCESS, ResponseCode.SUCCESS_MESSAGE, data);
-    }
-
-    /**
-     * 创建成功响应（带消息和数据）
-     *
-     * @param message 成功消息
-     * @param data    响应数据
-     * @return 响应对象
-     */
-    public static <T> Response<T> success(String message, T data) {
-        return new Response<>(ResponseCode.SUCCESS, message, data);
+        return new Response<>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMessage(), data);
     }
 
     /**
@@ -69,7 +60,7 @@ public class Response<T> {
      * @return 响应对象
      */
     public static <T> Response<T> failure(String message) {
-        return new Response<>(ResponseCode.FAILURE, message, null);
+        return new Response<>(ResponseCode.FAILURE.getCode(), message, null);
     }
 
     /**
@@ -101,46 +92,30 @@ public class Response<T> {
      * @return 响应对象
      */
     public static <T> Response<Page<T>> page(Page<T> page) {
-        return new Response<>(ResponseCode.SUCCESS, ResponseCode.SUCCESS_MESSAGE, page);
+        return new Response<>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMessage(), page);
     }
 
     /**
      * 响应码枚举
      */
-    public interface ResponseCode {
-        int SUCCESS = 0;
-        int SUCCESS_MESSAGE_CODE = 0;
-        String SUCCESS_MESSAGE = "操作成功";
+    @Getter
+    @AllArgsConstructor
+    public enum ResponseCode {
+        SUCCESS(0, "操作成功"),
+        FAILURE(1, "操作失败"),
+        BUSINESS_ERROR(1001, "业务错误"),
+        PARAM_ERROR(1002, "参数错误"),
+        SYSTEM_ERROR(5000, "系统错误"),
+        UNAUTHORIZED(401, "未授权，请登录"),
+        FORBIDDEN(403, "无权限访问"),
+        NOT_FOUND(404, "资源不存在"),
+        INSUFFICIENT_BALANCE(2001, "账户余额不足"),
+        BUDGET_EXCEEDED(2002, "消费已超出预算上限"),
+        PRICING_CONFIG_NOT_FOUND(3001, "定价配置不存在"),
+        USER_NOT_FOUND(4001, "用户不存在"),
+        TENANT_NOT_FOUND(4002, "租户不存在");
 
-        int FAILURE = 1;
-        String FAILURE_MESSAGE = "操作失败";
-
-        int BUSINESS_ERROR = 1001;
-        int PARAM_ERROR = 1002;
-        int SYSTEM_ERROR = 5000;
-
-        int UNAUTHORIZED = 401;
-        String UNAUTHORIZED_MESSAGE = "未授权，请登录";
-
-        int FORBIDDEN = 403;
-        String FORBIDDEN_MESSAGE = "无权限访问";
-
-        int NOT_FOUND = 404;
-        String NOT_FOUND_MESSAGE = "资源不存在";
-
-        int INSUFFICIENT_BALANCE = 2001;
-        String INSUFFICIENT_BALANCE_MESSAGE = "账户余额不足";
-
-        int BUDGET_EXCEEDED = 2002;
-        String BUDGET_EXCEEDED_MESSAGE = "消费已超出预算上限";
-
-        int PRICING_CONFIG_NOT_FOUND = 3001;
-        String PRICING_CONFIG_NOT_FOUND_MESSAGE = "定价配置不存在";
-
-        int USER_NOT_FOUND = 4001;
-        String USER_NOT_FOUND_MESSAGE = "用户不存在";
-
-        int TENANT_NOT_FOUND = 4002;
-        String TENANT_NOT_FOUND_MESSAGE = "租户不存在";
+        private final int code;
+        private final String message;
     }
 }
