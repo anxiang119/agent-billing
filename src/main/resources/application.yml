@@ -79,6 +79,10 @@ spring:
     encoding: UTF-8
     baseline-on-migrate: true
     validate-on-migrate: true
+    url: jdbc:mysql://localhost:3306/agent_billing?useUnicode=true&characterEncoding=utf8mb4&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    user: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   # 缓存配置
   cache:
