@@ -85,7 +85,7 @@ spring:
     type: redis
     redis:
       time-to-live: 3600000
-      key-prefix: billing:
+      key-prefix: "billing:"
       cache-null-values: false
 
 # MyBatis Plus 配置
