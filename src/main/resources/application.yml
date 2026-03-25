@@ -43,21 +43,6 @@ spring:
         format_sql: true
         use_sql_comments: true
 
-  # Redis 配置
-  data:
-    redis:
-      host: localhost
-      port: 6379
-      password:
-      database: 0
-      timeout: 5000ms
-      lettuce:
-        pool:
-          max-active: 20
-          max-idle: 10
-          min-idle: 5
-          max-wait: 3000ms
-
   # RabbitMQ 配置
   rabbitmq:
     host: localhost
@@ -84,38 +69,7 @@ spring:
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-  # 缓存配置
-  cache:
-    type: redis
-    redis:
-      time-to-live: 3600000
-      key-prefix: "billing:"
-      cache-null-values: false
-
-# MyBatis Plus 配置
-mybatis-plus:
-  mapper-locations: classpath*:mapper/**/*Mapper.xml
-  type-aliases-package: com.billing.entity
-  configuration:
-    map-underscore-to-camel-case: true
-    cache-enabled: false
-    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
-  global-config:
-    db-config:
-      id-type: auto
-      logic-delete-field: deleted
-      logic-delete-value: 1
-      logic-not-delete-value: 0
-
-# Redisson 配置
-redisson:
-  address: redis://localhost:6379
-  database: 0
-  connectionPoolSize: 20
-  connectionMinimumIdleSize: 5
-  password:
-
-# 服务配置
+  # 服务配置
 server:
   port: 8080
   servlet:
@@ -147,10 +101,6 @@ logging:
   level:
     root: INFO
     com.billing: DEBUG
-    com.alibaba.druid: INFO
-    org.springframework.web: INFO
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
