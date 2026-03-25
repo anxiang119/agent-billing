@@ -11,7 +11,7 @@ class WechatPaymentImplTest {
 
     @Test
     void testCreateOrder_Success() {
-        WechatPaymentImpl payment = new WechatPaymentImpl(null);
+        WechatPaymentImpl payment = new WechatPaymentImpl();
 
         PaymentDTO.CreateOrderRequest request = new PaymentDTO.CreateOrderRequest();
         request.setAmount(new BigDecimal("100.00"));
@@ -20,5 +20,28 @@ class WechatPaymentImplTest {
 
         assertNotNull(response);
         assertNotNull(response.getOrderNo());
+        assertTrue(response.getOrderNo().startsWith("WX"));
+    }
+
+    @Test
+    void testQueryOrder_Success() {
+        WechatPaymentImpl payment = new WechatPaymentImpl();
+
+        PaymentDTO.QueryOrderResponse response = payment.queryOrder("TEST_ORDER_001");
+
+        assertNotNull(response);
+        assertEquals("TEST_ORDER_001", response.getOrderNo());
+        assertEquals("SUCCESS", response.getStatus());
+    }
+
+    @Test
+    void testRefund_Success() {
+        WechatPaymentImpl payment = new WechatPaymentImpl();
+
+        PaymentDTO.QueryOrderResponse response = payment.refund("TEST_ORDER_002", new BigDecimal("50.00"));
+
+        assertNotNull(response);
+        assertEquals("TEST_ORDER_002", response.getOrderNo());
+        assertEquals("SUCCESS", response.getStatus());
     }
 }

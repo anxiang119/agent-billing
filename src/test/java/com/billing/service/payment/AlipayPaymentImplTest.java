@@ -11,7 +11,7 @@ class AlipayPaymentImplTest {
 
     @Test
     void testCreateOrder_Success() {
-        AlipayPaymentImpl payment = new AlipayPaymentImpl(null);
+        AlipayPaymentImpl payment = new AlipayPaymentImpl();
 
         PaymentDTO.CreateOrderRequest request = new PaymentDTO.CreateOrderRequest();
         request.setAmount(new BigDecimal("100.00"));
@@ -20,5 +20,28 @@ class AlipayPaymentImplTest {
 
         assertNotNull(response);
         assertNotNull(response.getOrderNo());
+        assertTrue(response.getOrderNo().startsWith("ALI"));
+    }
+
+    @Test
+    void testQueryOrder_Success() {
+        AlipayPaymentImpl payment = new AlipayPaymentImpl();
+
+        PaymentDTO.QueryOrderResponse response = payment.queryOrder("TEST_ORDER_001");
+
+        assertNotNull(response);
+        assertEquals("TEST_ORDER_001", response.getOrderNo());
+        assertEquals("SUCCESS", response.getStatus());
+    }
+
+    @Test
+    void testRefund_Success() {
+        AlipayPaymentImpl payment = new AlipayPaymentImpl();
+
+        PaymentDTO.QueryOrderResponse response = payment.refund("TEST_ORDER_002", new BigDecimal("50.00"));
+
+        assertNotNull(response);
+        assertEquals("TEST_ORDER_002", response.getOrderNo());
+        assertEquals("SUCCESS", response.getStatus());
     }
 }
