@@ -2,7 +2,7 @@ package com.billing.service.payment;
 
 import com.billing.dto.PaymentDTO;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Primary;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
