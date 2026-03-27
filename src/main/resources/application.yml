@@ -148,6 +148,7 @@ springdoc:
     path: /swagger-ui.html
     operations-sorter: method
     tags-sorter: alpha
+  packages-to-scan: com.billing.controller
   info:
     title: 智能体计费系统API
     description: 智能体计费系统REST API文档
