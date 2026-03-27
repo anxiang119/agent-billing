@@ -34,7 +34,7 @@
         <commons-io.version>2.15.1</commons-io.version>
         <guava.version>33.1.0-jre</guava.version>
         <redisson.version>3.25.0</redisson.version>
-        <springdoc-openapi.version>2.2.0</springdoc-openapi.version>
+        <springdoc-openapi.version>2.3.0</springdoc-openapi.version>
         <jjwt.version>0.12.3</jjwt.version>
         <reflections.version>0.10.2</reflections.version>
         <easyexcel.version>3.3.4</easyexcel.version>
